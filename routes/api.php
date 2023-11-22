@@ -47,7 +47,7 @@ Route::post('/Customer_store', [CustomerController::class, 'store']);
 Route::post('/Customer_show', [CustomerController::class, 'show']);
 Route::post('/Customer_update', [CustomerController::class, 'update']);
 Route::post('/Customer_destroy', [CustomerController::class, 'destroy']);
-Route::get('/Product_index', [ProductController::class, 'index']);
+Route::get('/Product_index', [ProductController::class, 'index'])->middleware('auth:api');
 Route::post('/Product_store', [ProductController::class, 'store']);
 Route::post('/Product_show', [ProductController::class, 'show']);
 Route::post('/Product_update/{id}', [ProductController::class, 'update']);
